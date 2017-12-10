@@ -5,9 +5,9 @@ This project contains a variety of sample selenium webdriver tests to reference
 
 ## Prerequisites
 
-1. [NodeJS](http://nodejs.org)
-2. [Selenium WebDriver Jar](https://goo.gl/hvDPsK)
-3. [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
+1. Install [NodeJS](http://nodejs.org)
+2. Download [Selenium WebDriver Jar](https://goo.gl/hvDPsK)
+3. Download [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
 
 ## Setup
 
