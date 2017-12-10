@@ -1,35 +1,9 @@
+//One of the important things to note in this file is that in each test, we return the selenium promise.
+//If you don't return the selenium promise, the test will conclude before selenium finishes executing as JS is asynchronous.
 
 var webdriver = require("selenium-webdriver");
-    var assert = require("assert");
-/*
-    describe("Demonstrating webdriver promises", function() {
-        this.timeout(30000);
-        var driver;
+var assert = require("assert");
 
-        before(function() {
-            driver = new webdriver.Builder().forBrowser("chrome").usingServer('http://localhost:4444/wd/hub').withCapabilities(webdriver.Capabilities.chrome()).build();
-        });
-
-        after(function() {
-            driver.quit();
-        });
-
-        it("I open the blog website", function() {
-            driver.get("https://team.goodeggs.com/getting-started-with-selenium-webdriver-for-node-js-f262a00c52e1");
-        });
-
-        it("The title is 'Scott Logic Blog'", function() {
-           driver.wait(function() {
-               console.log("roger");
-            return driver.getTitle().then(function(title) {
-                console.log("roger");
-                console.log(title === 'webdriver - Google Search');
-                return title === 'webdriver - Google Search';
-            });
-            }, 3000);
-        });
-    });
-    */
 describe("Inner Suite 1", function(){
   
     var driver;
@@ -67,23 +41,22 @@ describe("Inner Suite 1", function(){
   
     it("Test-1", function(){
         
+        //Open the webpage Google
+        //Notice we are use return here as driver.get() returns a promise.
         return driver.get("http://www.google.com");
-        
- 
-        
- 
+
     });
  
     it("Test-2", function(){
  
         // test Code
         // assertions
+		//Notice we are use return here as driver.get() returns a promise.
         return driver.getTitle().then(function( title ) {
- 
-    // google page title should be printed 
-            console.log("title", title);
+		    // google page title should be printed 
+			console.log("title", title);
+			// Demonstrating a failed test
             assert.equal(title, "Roger");
- 
         });
         
     });
