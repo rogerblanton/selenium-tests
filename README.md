@@ -1,6 +1,7 @@
 Selenium WebDriver NodeJS Sample Project
 ========================================
 
+This project contains a variety of sample selenium webdriver tests to reference
 
 ## Prerequisites
 
